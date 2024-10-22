@@ -1,14 +1,18 @@
 import { TouchableOpacityProps } from "react-native";
 
+type Appearance = "primary" | "secondary" | "tertiary";
+
 export interface Props extends TouchableOpacityProps {
   children: string;
-  appearance?: "primary" | "secondary";
+  appearance?: Appearance;
+  icon?: string;
+  iconSize?: number;
 }
 
 export interface ContainerProps {
-  appearance?: "primary" | "secondary";
+  appearance?: Appearance;
 }
 
 export interface TextProps {
-  appearance?: "primary" | "secondary";
+  appearance?: Appearance;
 }

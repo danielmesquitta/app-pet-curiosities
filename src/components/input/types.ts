@@ -3,6 +3,7 @@ import { TextInput, TextInputProps } from "react-native";
 export interface Props extends TextInputProps {
   name: string;
   icon?: string;
+  iconSize?: number;
   value?: string;
 }
 

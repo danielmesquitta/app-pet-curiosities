@@ -9,20 +9,6 @@ export const Container = styled.View`
 
 export const Content = styled.View``;
 
-export const Header = styled.View`
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 60px;
-`;
-
-export const Title = styled.Text`
-  font-size: 24px;
-  margin-bottom: 4px;
-  color: ${({ theme }) => theme.colors.primary._500};
-  font-family: ${({ theme }) => theme.fonts.black};
-`;
-
 export const SubTitle = styled.Text`
   font-size: 18px;
   color: ${({ theme }) => theme.colors.primary._500};

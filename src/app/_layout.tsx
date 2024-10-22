@@ -6,16 +6,20 @@ import {
   Montserrat_900Black,
   useFonts,
 } from "@expo-google-fonts/montserrat";
+import * as NavigationBar from "expo-navigation-bar";
 import { Slot } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { StatusBar } from "expo-status-bar";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { ThemeProvider } from "styled-components/native";
 
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
-  const [isLoaded, error] = useFonts({
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isNavigationBarReady, setIsNavigationBarReady] = useState(false);
+
+  const [isFontsLoaded, error] = useFonts({
     Montserrat_900Black,
     Montserrat_700Bold,
     Montserrat_500Medium,
@@ -26,10 +30,19 @@ export default function RootLayout() {
   }, [error]);
 
   useEffect(() => {
-    if (isLoaded) {
+    NavigationBar.setBackgroundColorAsync(theme.colors.primary._100).then(
+      () => {
+        setIsNavigationBarReady(true);
+      }
+    );
+  });
+
+  useEffect(() => {
+    if (isFontsLoaded && isNavigationBarReady) {
+      setIsLoaded(true);
       SplashScreen.hideAsync();
     }
-  }, [isLoaded]);
+  }, [isFontsLoaded, isNavigationBarReady]);
 
   if (!isLoaded) {
     return null;
