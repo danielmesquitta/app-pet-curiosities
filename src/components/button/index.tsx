@@ -8,10 +8,13 @@ export const Button: React.FC<Props> = ({
   iconSize = 20,
   children,
   appearance,
+  disabled,
   ...rest
 }) => (
-  <Container appearance={appearance} {...rest}>
+  <Container appearance={appearance} disabled={disabled} {...rest}>
     {icon && <Icon size={iconSize} name={icon} />}
-    <Text appearance={appearance}>{children}</Text>
+    <Text appearance={appearance} disabled={disabled}>
+      {children}
+    </Text>
   </Container>
 );

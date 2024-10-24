@@ -22,8 +22,8 @@ export default {
       _200: "#C53030",
     },
     success: {
-      _100: "#E6FFFA",
-      _200: "#2E656A",
+      _100: "#E9EED9",
+      _200: "#CBD2A4",
     },
     warning: {
       _100: "#ffeebf",

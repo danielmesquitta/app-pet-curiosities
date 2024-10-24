@@ -1,7 +1,7 @@
 import { Wrapper } from "@/src/layouts/wrapper";
-import { Container } from "./styles";
+import { Container } from "../styles";
 
-export default function Profile() {
+export default function Avatar() {
   return (
     <Wrapper>
       <Container></Container>

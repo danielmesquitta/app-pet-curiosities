@@ -12,7 +12,8 @@ const backgroundOptions = {
 
 export const Container = styled(TouchableOpacity)<ContainerProps>`
   height: 60px;
-  background: ${({ appearance }) => backgroundOptions[appearance || "primary"]};
+  background: ${({ appearance, disabled }) =>
+    disabled ? colors.gray._100 : backgroundOptions[appearance || "primary"]};
   border-radius: 4px;
   flex-direction: row;
   justify-content: center;
@@ -20,7 +21,8 @@ export const Container = styled(TouchableOpacity)<ContainerProps>`
 `;
 
 export const Text = styled.Text<TextProps>`
-  color: ${({ theme }) => theme.colors.primary._500};
+  color: ${({ theme, disabled }) =>
+    disabled ? colors.gray._200 : theme.colors.primary._500};
   text-decoration: ${({ appearance }) =>
     appearance === "tertiary" ? "underline" : "none"};
   font-family: ${({ theme }) => theme.fonts.bold};
