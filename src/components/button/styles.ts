@@ -1,5 +1,5 @@
 import { colors } from "@/src/theme";
-import { FontAwesome6 } from "@expo/vector-icons";
+import { Ionicons } from "@expo/vector-icons";
 import { TouchableOpacity } from "react-native";
 import styled from "styled-components/native";
 import { ContainerProps, TextProps } from "./types";
@@ -29,7 +29,7 @@ export const Text = styled.Text<TextProps>`
   font-size: 18px;
 `;
 
-export const Icon = styled(FontAwesome6)`
+export const Icon = styled(Ionicons)`
   margin-right: 16px;
   color: ${({ theme }) => theme.colors.primary._500};
 `;

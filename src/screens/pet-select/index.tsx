@@ -1,17 +1,19 @@
 import { Button } from "@/src/components/button";
 import { Input } from "@/src/components/input";
-import { PetSelect } from "@/src/layouts/pet-select";
+import { PetSelect as PetSelectLayout } from "@/src/layouts/pet-select";
 import { Pet } from "@/src/layouts/pet-select/types";
-import { SelectPetHeader } from "@/src/layouts/select-pet-header";
 import { Link } from "expo-router";
 import { useState } from "react";
 import {
-  SelectPetContainer,
-  SelectPetFooter,
-  SelectPetFooterContent,
-  SelectPetFooterText,
-  SelectPetFooterTitle,
-  SelectPetForm,
+  Container,
+  Footer,
+  FooterContent,
+  FooterText,
+  FooterTitle,
+  Form,
+  Header,
+  HeaderSubTitle,
+  HeaderTitle,
 } from "./styles";
 
 const data = [
@@ -145,37 +147,40 @@ const data = [
 
 const initialSelectedPet = data.find((pet) => pet.selected);
 
-export default function SelectPet() {
+export function PetSelect() {
   const [pet, setPet] = useState<Pet | null>(initialSelectedPet || null);
 
   return (
-    <SelectPetContainer>
-      <SelectPetHeader />
+    <Container>
+      <Header>
+        <HeaderTitle>Choose your pet</HeaderTitle>
+        <HeaderSubTitle>
+          Select the pet breed you want to know more about!
+        </HeaderSubTitle>
+      </Header>
 
-      <SelectPetForm>
+      <Form>
         <Input
-          icon="magnifying-glass"
+          icon="search"
           name="search"
           placeholder="Search for a pet breed"
         />
-      </SelectPetForm>
+      </Form>
 
-      <PetSelect pets={data} onSelect={setPet} />
+      <PetSelectLayout pets={data} onSelect={setPet} />
 
-      <SelectPetFooter>
-        <SelectPetFooterContent>
-          {pet && <SelectPetFooterTitle>Your pet:</SelectPetFooterTitle>}
-          <SelectPetFooterText>
-            {pet?.breed || "Choose a pet to continue"}
-          </SelectPetFooterText>
-        </SelectPetFooterContent>
+      <Footer>
+        <FooterContent>
+          {pet && <FooterTitle>Your pet:</FooterTitle>}
+          <FooterText>{pet?.breed || "Choose a pet to continue"}</FooterText>
+        </FooterContent>
 
         <Link disabled={!pet} href="/home" asChild>
           <Button disabled={!pet} style={{ flex: 1 }}>
             Continue
           </Button>
         </Link>
-      </SelectPetFooter>
-    </SelectPetContainer>
+      </Footer>
+    </Container>
   );
 }

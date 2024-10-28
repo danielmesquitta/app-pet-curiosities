@@ -1,9 +1,7 @@
 import * as theme from "@/src/theme";
-
-type Theme = typeof theme;
+import "styled-components/native";
 
 declare module "styled-components" {
-  export interface DefaultTheme extends Theme {
-    colors: typeof theme.colors;
-  }
+  type ThemeType = typeof theme;
+  export interface DefaultTheme extends ThemeType {}
 }

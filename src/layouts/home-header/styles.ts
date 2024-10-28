@@ -1,5 +1,6 @@
-import { FontAwesome6 } from "@expo/vector-icons";
+import { Ionicons } from "@expo/vector-icons";
 import styled from "styled-components/native";
+import { IconProps } from "./types";
 
 export const Container = styled.View`
   flex-direction: row;
@@ -14,13 +15,13 @@ export const Content = styled.View`
   flex-direction: row;
 `;
 
-export const Text = styled.Text`
+export const Text = styled.Text<IconProps>`
   font-size: 16px;
   font-family: ${({ theme }) => theme.fonts.bold};
-  color: ${({ theme }) => theme.colors.primary._500};
+  color: ${({ theme, color }) => color || theme.colors.primary._500};
 `;
 
-export const Icon = styled(FontAwesome6)`
+export const Icon = styled(Ionicons)<IconProps>`
   margin-right: 8px;
-  color: ${({ theme }) => theme.colors.primary._500};
+  color: ${({ theme, color }) => color || theme.colors.primary._500};
 `;

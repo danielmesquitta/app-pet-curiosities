@@ -1,15 +1,14 @@
 import { colors } from "@/src/theme";
-import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
+import { Ionicons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import React from "react";
 
-// You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
-function TabBarIcon(props: {
-  name: React.ComponentProps<typeof FontAwesome6>["name"];
+function Icon(props: {
+  name: React.ComponentProps<typeof Ionicons>["name"];
   color: string;
 }) {
-  return <FontAwesome6 size={28} style={{ marginBottom: -3 }} {...props} />;
+  return <Ionicons size={28} style={{ marginBottom: -3 }} {...props} />;
 }
 
 export default function TabLayout() {
@@ -33,29 +32,25 @@ export default function TabLayout() {
         <Tabs.Screen
           name="index"
           options={{
-            tabBarIcon: ({ color }) => <TabBarIcon name="paw" color={color} />,
+            tabBarIcon: ({ color }) => <Icon name="paw" color={color} />,
           }}
         />
         <Tabs.Screen
           name="quiz"
           options={{
-            tabBarIcon: ({ color }) => (
-              <TabBarIcon name="book-open" color={color} />
-            ),
+            tabBarIcon: ({ color }) => <Icon name="book" color={color} />,
           }}
         />
         <Tabs.Screen
           name="ranking"
           options={{
-            tabBarIcon: ({ color }) => (
-              <TabBarIcon name="ranking-star" color={color} />
-            ),
+            tabBarIcon: ({ color }) => <Icon name="podium" color={color} />,
           }}
         />
         <Tabs.Screen
           name="profile"
           options={{
-            tabBarIcon: ({ color }) => <TabBarIcon name="user" color={color} />,
+            tabBarIcon: ({ color }) => <Icon name="person" color={color} />,
           }}
         />
       </Tabs>

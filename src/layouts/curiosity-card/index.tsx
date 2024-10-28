@@ -1,12 +1,6 @@
+import { colors } from "@/src/theme";
 import { useState } from "react";
-import {
-  Container,
-  Content,
-  FilledHeartIcon,
-  Footer,
-  Icon,
-  Title,
-} from "./styles";
+import { Container, Content, Footer, Icon, Title } from "./styles";
 import { Props } from "./types";
 
 export function CuriosityCard({ title, content, ...rest }: Props) {
@@ -17,11 +11,11 @@ export function CuriosityCard({ title, content, ...rest }: Props) {
       <Title>{title}</Title>
       <Content>{content}</Content>
       <Footer>
-        <Icon size={30} name="repeat" />
+        <Icon size={30} name="refresh" />
         {isLiked ? (
-          <FilledHeartIcon size={30} name="heart" />
+          <Icon color={colors.status.error._200} size={30} name="heart" />
         ) : (
-          <Icon size={30} name="heart" />
+          <Icon size={30} name="heart-outline" />
         )}
       </Footer>
     </Container>

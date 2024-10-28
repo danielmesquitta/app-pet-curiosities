@@ -3,7 +3,7 @@ import { AuthHeader } from "@/src/layouts/auth-header";
 import { Wrapper } from "@/src/layouts/wrapper";
 import { Link } from "expo-router";
 import React from "react";
-import { Container, Content, Form, SubTitle } from "./styles";
+import { Container, Content, Form, SubTitle } from "../styles";
 
 export default function SocialSignIn() {
   return (

@@ -1,13 +1,5 @@
-import { HomeHeader } from "@/src/layouts/home-header";
-import { Wrapper } from "@/src/layouts/wrapper";
-import { Container } from "./styles";
+import { Ranking as RankingScreen } from "@/src/screens/ranking";
 
 export default function Ranking() {
-  return (
-    <Wrapper>
-      <HomeHeader />
-
-      <Container></Container>
-    </Wrapper>
-  );
+  return <RankingScreen />;
 }

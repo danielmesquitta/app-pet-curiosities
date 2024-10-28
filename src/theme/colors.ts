@@ -19,7 +19,7 @@ export default {
   status: {
     error: {
       _100: "#FDDEDE",
-      _200: "#C53030",
+      _200: "#A34343",
     },
     success: {
       _100: "#E9EED9",

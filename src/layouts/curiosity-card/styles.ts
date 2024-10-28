@@ -1,5 +1,6 @@
-import { FontAwesome, FontAwesome6 } from "@expo/vector-icons";
+import { Ionicons } from "@expo/vector-icons";
 import styled from "styled-components/native";
+import { IconProps } from "./types";
 
 export const Container = styled.View`
   flex: 1;
@@ -30,10 +31,6 @@ export const Footer = styled.View`
   justify-content: flex-end;
 `;
 
-export const FilledHeartIcon = styled(FontAwesome)`
-  color: ${({ theme }) => theme.colors.primary._500};
-`;
-
-export const Icon = styled(FontAwesome6)`
-  color: ${({ theme }) => theme.colors.primary._500};
+export const Icon = styled(Ionicons)<IconProps>`
+  color: ${({ theme, color }) => color || theme.colors.primary._500};
 `;

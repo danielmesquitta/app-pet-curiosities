@@ -1,6 +1,6 @@
 import { TextInput as RNTextInput, TouchableOpacity } from "react-native";
 
-import { FontAwesome6 } from "@expo/vector-icons";
+import { Ionicons } from "@expo/vector-icons";
 import styled from "styled-components/native";
 
 import { ContainerProps, IconProps } from "./types";
@@ -25,7 +25,7 @@ export const TextInput = styled(RNTextInput)`
   font-family: ${({ theme }) => theme.fonts.regular};
 `;
 
-export const Icon = styled(FontAwesome6)<IconProps>`
+export const Icon = styled(Ionicons)<IconProps>`
   margin-right: 16px;
   color: ${({ theme, isFocused, isFilled }) =>
     isFocused || isFilled ? theme.colors.primary._300 : theme.colors.gray._100};
