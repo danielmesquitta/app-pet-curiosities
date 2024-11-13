@@ -1,7 +1,7 @@
-import { Button } from "@/src/components/button";
-import { CuriosityCard } from "@/src/layouts/curiosity-card";
-import { HomeHeader } from "@/src/layouts/home-header";
-import { Wrapper } from "@/src/layouts/wrapper";
+import { Button } from "@/components/button";
+import { CuriosityCard } from "@/layouts/curiosity-card";
+import { HomeHeader } from "@/layouts/home-header";
+import { Wrapper } from "@/layouts/wrapper";
 import { Image } from "react-native";
 import { Container, HomeContainer, HomeSubTitle, HomeTitle } from "./styles";
 
@@ -27,7 +27,7 @@ export function Home() {
               height: 150,
               objectFit: "contain",
             }}
-            source={require("@/assets/images/pets/dogs/golden-retriever.png")}
+            source={require("@assets/images/pets/dogs/golden-retriever.png")}
           />
 
           <HomeTitle>Did you know?</HomeTitle>

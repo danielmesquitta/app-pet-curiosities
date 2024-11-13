@@ -1,6 +1,6 @@
-import { Button } from "@/src/components/button";
-import { Select } from "@/src/components/select";
-import { Item } from "@/src/components/select/types";
+import { Button } from "@/components/button";
+import { Select } from "@/components/select";
+import { Item } from "@/components/select/types";
 import { useState } from "react";
 import {
   Container,
@@ -15,19 +15,19 @@ import {
 const data: Item[] = [
   {
     id: "0",
-    image: require("@/assets/images/pets/dogs/beagle.png"),
+    image: require("@assets/images/pets/dogs/beagle.png"),
   },
   {
     id: "1",
-    image: require("@/assets/images/pets/dogs/chihuahua.png"),
+    image: require("@assets/images/pets/dogs/chihuahua.png"),
   },
   {
     id: "2",
-    image: require("@/assets/images/pets/dogs/shih-tzu.png"),
+    image: require("@assets/images/pets/dogs/shih-tzu.png"),
   },
   {
     id: "3",
-    image: require("@/assets/images/pets/dogs/pit-bull.png"),
+    image: require("@assets/images/pets/dogs/pit-bull.png"),
   },
 ];
 

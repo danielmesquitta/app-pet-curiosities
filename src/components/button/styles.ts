@@ -1,4 +1,4 @@
-import { colors } from "@/src/theme";
+import { colors } from "@/theme";
 import { Ionicons } from "@expo/vector-icons";
 import { TouchableOpacity } from "react-native";
 import styled from "styled-components/native";

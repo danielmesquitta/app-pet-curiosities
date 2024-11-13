@@ -1,4 +1,4 @@
-import { PetSelect } from "@/src/screens/pet-select";
+import { PetSelect } from "@/screens/pet-select";
 
 export default function Pets() {
   return <PetSelect />;

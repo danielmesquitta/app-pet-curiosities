@@ -1,4 +1,4 @@
-import { colors } from "@/src/theme";
+import { colors } from "@/theme";
 import styled from "styled-components/native";
 import { CardProps } from "./types";
 

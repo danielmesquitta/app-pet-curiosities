@@ -7,7 +7,7 @@ import React, {
   useState,
 } from "react";
 
-import { colors } from "@/src/theme";
+import { colors } from "@/theme";
 
 import { Container, Icon, TextInput } from "./styles";
 import { ForwardRef, InputProps, Props } from "./types";

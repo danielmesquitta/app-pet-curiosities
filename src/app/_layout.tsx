@@ -1,5 +1,5 @@
-import { HooksProvider } from "@/src/hooks";
-import * as theme from "@/src/theme";
+import { HooksProvider } from "@/hooks";
+import * as theme from "@/theme";
 import {
   Montserrat_500Medium,
   Montserrat_700Bold,

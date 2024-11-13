@@ -1,4 +1,4 @@
-import { colors } from "@/src/theme";
+import { colors } from "@/theme";
 import { Container, Content, FontAwesomeIcon, Icon, Text } from "./styles";
 
 export function HomeHeader() {

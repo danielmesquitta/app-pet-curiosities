@@ -1,7 +1,7 @@
-import { Container as ContainerLayout } from "@/src/layouts/container";
-import { HomeHeader } from "@/src/layouts/home-header";
-import { colors } from "@/src/theme";
-import { capitalize } from "@/src/utils/capitalize";
+import { Container as ContainerLayout } from "@/layouts/container";
+import { HomeHeader } from "@/layouts/home-header";
+import { colors } from "@/theme";
+import { capitalize } from "@/utils/capitalize";
 import { useState } from "react";
 import { Dimensions, FlatList, View } from "react-native";
 import {
@@ -28,37 +28,37 @@ const leagues: LeagueProps[] = [
   {
     id: "bronze",
     name: "bronze",
-    image: require("@/assets/images/leagues/bronze.png"),
+    image: require("@assets/images/leagues/bronze.png"),
   },
   {
     id: "silver",
     name: "silver",
-    image: require("@/assets/images/leagues/silver.png"),
+    image: require("@assets/images/leagues/silver.png"),
   },
   {
     id: "gold",
     name: "gold",
-    image: require("@/assets/images/leagues/gold.png"),
+    image: require("@assets/images/leagues/gold.png"),
   },
   {
     id: "sapphire",
     name: "sapphire",
-    image: require("@/assets/images/leagues/sapphire.png"),
+    image: require("@assets/images/leagues/sapphire.png"),
   },
   {
     id: "ruby",
     name: "ruby",
-    image: require("@/assets/images/leagues/ruby.png"),
+    image: require("@assets/images/leagues/ruby.png"),
   },
   {
     id: "emerald",
     name: "emerald",
-    image: require("@/assets/images/leagues/emerald.png"),
+    image: require("@assets/images/leagues/emerald.png"),
   },
   {
     id: "diamond",
     name: "diamond",
-    image: require("@/assets/images/leagues/diamond.png"),
+    image: require("@assets/images/leagues/diamond.png"),
   },
 ];
 

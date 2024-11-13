@@ -1,6 +1,6 @@
-import { HomeHeader } from "@/src/layouts/home-header";
-import { Wrapper } from "@/src/layouts/wrapper";
-import { ImageQuiz } from "@/src/screens/quiz/image";
+import { HomeHeader } from "@/layouts/home-header";
+import { Wrapper } from "@/layouts/wrapper";
+import { ImageQuiz } from "@/screens/quiz/image";
 
 export default function Quiz() {
   return (

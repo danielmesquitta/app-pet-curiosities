@@ -1,6 +1,6 @@
-import { Button } from "@/src/components/button";
-import { AuthHeader } from "@/src/layouts/auth-header";
-import { Wrapper } from "@/src/layouts/wrapper";
+import { Button } from "@/components/button";
+import { AuthHeader } from "@/layouts/auth-header";
+import { Wrapper } from "@/layouts/wrapper";
 import { Link } from "expo-router";
 import React from "react";
 import { Container, Content, Form, SubTitle } from "./styles";
@@ -15,9 +15,13 @@ export function SocialSignIn() {
           <Form>
             <SubTitle>Join a community of pet lovers!</SubTitle>
 
+            <Link href="/onboarding" asChild>
+              <Button onPress={() => {}}>Get started</Button>
+            </Link>
+
             <Link href="/home" asChild>
-              <Button icon="logo-google" onPress={() => {}}>
-                Continue with Google
+              <Button appearance="secondary" onPress={() => {}}>
+                I already have an account
               </Button>
             </Link>
           </Form>

@@ -1,4 +1,4 @@
-import { colors } from "@/src/theme";
+import { colors } from "@/theme";
 import { useState } from "react";
 import {
   Container,
