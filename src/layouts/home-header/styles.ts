@@ -1,4 +1,4 @@
-import { Ionicons } from "@expo/vector-icons";
+import { FontAwesome6, Ionicons } from "@expo/vector-icons";
 import styled from "styled-components/native";
 import { IconProps } from "./types";
 
@@ -18,6 +18,11 @@ export const Content = styled.View`
 export const Text = styled.Text<IconProps>`
   font-size: 16px;
   font-family: ${({ theme }) => theme.fonts.bold};
+  color: ${({ theme, color }) => color || theme.colors.primary._500};
+`;
+
+export const FontAwesomeIcon = styled(FontAwesome6)<IconProps>`
+  margin-right: 8px;
   color: ${({ theme, color }) => color || theme.colors.primary._500};
 `;
 

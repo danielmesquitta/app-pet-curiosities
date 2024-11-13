@@ -3,9 +3,9 @@ import { AuthHeader } from "@/src/layouts/auth-header";
 import { Wrapper } from "@/src/layouts/wrapper";
 import { Link } from "expo-router";
 import React from "react";
-import { Container, Content, Form, SubTitle } from "../styles";
+import { Container, Content, Form, SubTitle } from "./styles";
 
-export default function SocialSignIn() {
+export function SocialSignIn() {
   return (
     <Wrapper>
       <Container>
@@ -18,16 +18,6 @@ export default function SocialSignIn() {
             <Link href="/home" asChild>
               <Button icon="logo-google" onPress={() => {}}>
                 Continue with Google
-              </Button>
-            </Link>
-            <Link href="/home" asChild>
-              <Button
-                icon="logo-apple"
-                iconSize={25}
-                appearance="secondary"
-                onPress={() => {}}
-              >
-                Continue with Apple
               </Button>
             </Link>
           </Form>

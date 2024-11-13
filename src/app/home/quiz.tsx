@@ -1,13 +1,13 @@
 import { HomeHeader } from "@/src/layouts/home-header";
 import { Wrapper } from "@/src/layouts/wrapper";
-import { Container } from "./styles";
+import { ImageQuiz } from "@/src/screens/quiz/image";
 
 export default function Quiz() {
   return (
     <Wrapper>
       <HomeHeader />
 
-      <Container></Container>
+      <ImageQuiz />
     </Wrapper>
   );
 }

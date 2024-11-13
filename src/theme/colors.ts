@@ -18,8 +18,8 @@ export default {
 
   status: {
     error: {
-      _100: "#FDDEDE",
-      _200: "#A34343",
+      _100: "#eccaca",
+      _200: "#C96868",
     },
     success: {
       _100: "#E9EED9",
@@ -30,8 +30,8 @@ export default {
       _200: "#FFB900",
     },
     info: {
-      _100: "#EBF8FF",
-      _200: "#3172B7",
+      _100: "#CBDCEB",
+      _200: "#608BC1",
     },
   },
 };

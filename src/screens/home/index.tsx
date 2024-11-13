@@ -25,8 +25,9 @@ export function Home() {
             style={{
               width: 150,
               height: 150,
+              objectFit: "contain",
             }}
-            source={require("@/assets/images/logo.png")}
+            source={require("@/assets/images/pets/dogs/golden-retriever.png")}
           />
 
           <HomeTitle>Did you know?</HomeTitle>
