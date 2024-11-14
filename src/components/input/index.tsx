@@ -59,13 +59,14 @@ export const Input = forwardRef<ForwardRef, Props>(function Input(
     <Container
       onPress={handleInputClick}
       activeOpacity={1}
-      {...{ style, isFocused }}
+      isFocused={isFocused}
     >
       {icon && (
         <Icon
           size={iconSize}
           name={icon}
-          {...{ isFocused, isFilled: !!value }}
+          isFocused={isFocused}
+          isFilled={!!value}
         />
       )}
       <TextInput
