@@ -3,6 +3,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import React from "react";
+import { TouchableOpacity } from "react-native";
 
 function Icon(props: {
   name: React.ComponentProps<typeof Ionicons>["name"];
@@ -18,14 +19,23 @@ export default function TabLayout() {
 
       <Tabs
         screenOptions={{
+          animation: "fade",
           headerShown: false,
           tabBarActiveTintColor: colors.primary._500,
           tabBarInactiveTintColor: colors.gray._100,
-          tabBarInactiveBackgroundColor: colors.primary._100,
-          tabBarActiveBackgroundColor: colors.primary._100,
           tabBarShowLabel: false,
+          tabBarButton: ({ children, ...rest }) => (
+            <TouchableOpacity {...(rest as any)} activeOpacity={0.7}>
+              {children}
+            </TouchableOpacity>
+          ),
+          tabBarItemStyle: {
+            marginTop: 12,
+            justifyContent: "center",
+          },
           tabBarStyle: {
-            height: 60,
+            height: 64,
+            backgroundColor: colors.primary._100,
           },
         }}
       >

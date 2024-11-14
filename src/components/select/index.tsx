@@ -1,6 +1,12 @@
 import { useEffect, useMemo, useState } from "react";
 import { FlatList } from "react-native";
-import { Card, CardImage, CardText, Container } from "./styles";
+import {
+  Card,
+  CardImage,
+  CardText,
+  CardTextContainer,
+  Container,
+} from "./styles";
 import { Item, Props, SelectItemProps } from "./types";
 
 function SelectItem({ item, onSelect, quiz }: SelectItemProps) {
@@ -27,10 +33,23 @@ function SelectItem({ item, onSelect, quiz }: SelectItemProps) {
     return "primary";
   }, [item.id, item.isSelected, quiz]);
 
+  const texts = item.text?.split("<br/>") || [];
+
   return (
-    <Card appearance={appearance} activeOpacity={0.7} onPress={handleSelect}>
+    <Card
+      type={item.image ? "image" : "text"}
+      appearance={appearance}
+      activeOpacity={0.7}
+      onPress={handleSelect}
+    >
       {item.image && <CardImage source={item.image} />}
-      {item.text && <CardText>{item.text}</CardText>}
+      {texts.length > 0 && (
+        <CardTextContainer>
+          {texts.map((text, index) => (
+            <CardText key={index}>{text}</CardText>
+          ))}
+        </CardTextContainer>
+      )}
     </Card>
   );
 }

@@ -1,5 +1,5 @@
-import { PetSelect } from "@/screens/pet-select";
+import { Species as SpeciesScreen } from "@/screens/species";
 
-export default function Pets() {
-  return <PetSelect />;
+export default function Species() {
+  return <SpeciesScreen />;
 }

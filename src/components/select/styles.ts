@@ -1,5 +1,5 @@
 import { colors } from "@/theme";
-import styled from "styled-components/native";
+import styled, { css } from "styled-components/native";
 import { CardProps } from "./types";
 
 const backgroundOptions = {
@@ -20,19 +20,23 @@ export const Container = styled.View`
 
 export const Card = styled.TouchableOpacity<CardProps>`
   flex: 1;
-  background-color: ${({ appearance }) =>
-    backgroundOptions[appearance || "primary"]};
-  height: 200px;
-  display: flex;
-  align-items: center;
   justify-content: center;
   gap: 16px;
   border-radius: 8px;
+  padding: 16px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   margin: 8px;
-  padding-right: 8px;
-  padding-left: 8px;
   border-width: 2px;
   border-color: ${({ appearance }) => borderOptions[appearance || "primary"]};
+  background-color: ${({ appearance }) =>
+    backgroundOptions[appearance || "primary"]};
+  ${({ type }) =>
+    type === "image" &&
+    css`
+      height: 200px;
+      align-items: center;
+    `}
 `;
 
 export const CardImage = styled.Image`
@@ -42,9 +46,14 @@ export const CardImage = styled.Image`
   object-fit: contain;
 `;
 
+export const CardTextContainer = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+`;
+
 export const CardText = styled.Text`
   font-size: 16px;
   color: ${({ theme }) => theme.colors.primary._500};
   font-family: ${({ theme }) => theme.fonts.bold};
-  text-align: center;
+  text-align: start;
 `;

@@ -51,6 +51,7 @@ export function CuriosityCard({ title, content, ...rest }: Props) {
           <FooterLeftText>10 likes | 5 dislikes</FooterLeftText>
         </FooterLeft>
 
+        <Icon size={30} name="flag-outline" />
         <Icon size={30} name="refresh" />
       </Footer>
     </Container>

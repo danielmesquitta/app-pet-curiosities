@@ -12,7 +12,12 @@ export function Button({
   ...rest
 }: Props) {
   return (
-    <Container appearance={appearance} disabled={disabled} {...rest}>
+    <Container
+      appearance={appearance}
+      disabled={disabled}
+      activeOpacity={0.7}
+      {...rest}
+    >
       {icon && <Icon size={iconSize} name={icon} />}
       <Text appearance={appearance} disabled={disabled}>
         {children}

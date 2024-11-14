@@ -2,8 +2,10 @@ import { Button } from "@/components/button";
 import { Input } from "@/components/input";
 import { Select } from "@/components/select";
 import { Item } from "@/components/select/types";
-import { Link } from "expo-router";
-import { useState } from "react";
+import { useOnboarding } from "@/hooks/onboarding";
+import { OnboardingHeader } from "@/layouts/onboarding-header";
+import { Link, useLocalSearchParams } from "expo-router";
+import { useEffect, useState } from "react";
 import {
   Container,
   Footer,
@@ -11,9 +13,6 @@ import {
   FooterText,
   FooterTitle,
   Form,
-  Header,
-  HeaderSubTitle,
-  HeaderTitle,
 } from "./styles";
 
 const data: Item[] = [
@@ -144,9 +143,16 @@ const data: Item[] = [
   },
 ];
 
-export function PetSelect() {
-  const [pet, setPet] = useState<Item | null>(null);
+export function Breeds() {
+  const { progress } = useLocalSearchParams();
+
+  const { setProgress } = useOnboarding();
+  const [breed, setBreed] = useState<Item | null>(null);
   const [search, setSearch] = useState("");
+
+  useEffect(() => {
+    setProgress(Number(progress));
+  }, []);
 
   function handleSearch(text: string) {
     setSearch(text);
@@ -154,12 +160,10 @@ export function PetSelect() {
 
   return (
     <Container>
-      <Header>
-        <HeaderTitle>Choose your pet</HeaderTitle>
-        <HeaderSubTitle>
-          Select the pet breed you want to know more about!
-        </HeaderSubTitle>
-      </Header>
+      <OnboardingHeader
+        title="Which breed is your pet?"
+        subtitle="Pick the breed you want to know more about!"
+      />
 
       <Form>
         <Input
@@ -171,16 +175,16 @@ export function PetSelect() {
         />
       </Form>
 
-      <Select numColumns={2} items={data} onSelect={setPet} search={search} />
+      <Select numColumns={2} items={data} onSelect={setBreed} search={search} />
 
       <Footer>
         <FooterContent>
-          {pet && <FooterTitle>Your pet:</FooterTitle>}
-          <FooterText>{pet?.text || "Choose a pet to continue"}</FooterText>
+          {breed && <FooterTitle>Your pet:</FooterTitle>}
+          <FooterText>{breed?.text || "Choose a breed to continue"}</FooterText>
         </FooterContent>
 
-        <Link disabled={!pet} href="/home" asChild>
-          <Button disabled={!pet} style={{ flex: 1 }}>
+        <Link disabled={!breed} href="/onboarding/goals" asChild>
+          <Button disabled={!breed} style={{ flex: 1 }}>
             Continue
           </Button>
         </Link>

@@ -29,4 +29,5 @@ export type Appearance = "primary" | "success" | "error";
 
 export interface CardProps extends TouchableOpacityProps {
   appearance?: Appearance;
+  type?: "image" | "text";
 }
