@@ -15,7 +15,7 @@ export function SocialSignIn() {
           <Form>
             <SubTitle>Join a community of pet lovers!</SubTitle>
 
-            <Link href="/onboarding" asChild>
+            <Link href="/onboarding/paywall" asChild>
               <Button onPress={() => {}}>Get started</Button>
             </Link>
 

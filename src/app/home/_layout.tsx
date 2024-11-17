@@ -15,13 +15,13 @@ function Icon(props: {
 export default function TabLayout() {
   return (
     <>
-      <StatusBar style="dark" backgroundColor={colors.primary._100} />
+      <StatusBar style="dark" backgroundColor={colors.primary._200} />
 
       <Tabs
         screenOptions={{
           animation: "fade",
           headerShown: false,
-          tabBarActiveTintColor: colors.primary._500,
+          tabBarActiveTintColor: colors.primary._600,
           tabBarInactiveTintColor: colors.gray._100,
           tabBarShowLabel: false,
           tabBarButton: ({ children, ...rest }) => (
@@ -35,7 +35,7 @@ export default function TabLayout() {
           },
           tabBarStyle: {
             height: 64,
-            backgroundColor: colors.primary._100,
+            backgroundColor: colors.primary._200,
           },
         }}
       >

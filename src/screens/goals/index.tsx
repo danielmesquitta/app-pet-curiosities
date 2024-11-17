@@ -32,7 +32,7 @@ export function Goals() {
 
   const { setProgress } = useOnboarding();
 
-  const [choice, setBreed] = useState<Item | null>(null);
+  const [goal, setGoal] = useState<Item | null>(null);
 
   useEffect(() => {
     setProgress(Number(progress));
@@ -48,17 +48,17 @@ export function Goals() {
       <Select
         numColumns={1}
         items={data}
-        onSelect={setBreed}
+        onSelect={setGoal}
         style={{ marginTop: "20%" }}
       />
 
       <Footer>
         <FooterContent>
-          <FooterText>{!choice && "Choose an option to continue"}</FooterText>
+          <FooterText>{!goal && "Choose an option to continue"}</FooterText>
         </FooterContent>
 
-        <Link disabled={!choice} href="/home" asChild>
-          <Button disabled={!choice} style={{ flex: 1 }}>
+        <Link disabled={!goal} href="/home" asChild>
+          <Button disabled={!goal} style={{ flex: 1 }}>
             Continue
           </Button>
         </Link>

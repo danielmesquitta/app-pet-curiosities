@@ -8,7 +8,7 @@ export const Container = styled.View`
   justify-content: center;
   gap: 32px;
   padding-bottom: 12px;
-  background-color: ${({ theme }) => theme.colors.primary._100};
+  background-color: ${({ theme }) => theme.colors.primary._200};
 `;
 
 export const Content = styled.View`
@@ -18,15 +18,15 @@ export const Content = styled.View`
 export const Text = styled.Text<IconProps>`
   font-size: 16px;
   font-family: ${({ theme }) => theme.fonts.bold};
-  color: ${({ theme, color }) => color || theme.colors.primary._500};
+  color: ${({ theme, color }) => color || theme.colors.primary._600};
 `;
 
 export const FontAwesomeIcon = styled(FontAwesome6)<IconProps>`
   margin-right: 8px;
-  color: ${({ theme, color }) => color || theme.colors.primary._500};
+  color: ${({ theme, color }) => color || theme.colors.primary._600};
 `;
 
 export const Icon = styled(Ionicons)<IconProps>`
   margin-right: 8px;
-  color: ${({ theme, color }) => color || theme.colors.primary._500};
+  color: ${({ theme, color }) => color || theme.colors.primary._600};
 `;

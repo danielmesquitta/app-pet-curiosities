@@ -3,13 +3,13 @@ import styled, { css } from "styled-components/native";
 import { CardProps } from "./types";
 
 const backgroundOptions = {
-  primary: colors.primary._200,
+  primary: colors.primary._300,
   success: colors.status.success._100,
   error: colors.status.error._100,
 };
 
 const borderOptions = {
-  primary: colors.primary._200,
+  primary: colors.primary._300,
   success: colors.status.success._200,
   error: colors.status.error._200,
 };
@@ -53,7 +53,7 @@ export const CardTextContainer = styled.View`
 
 export const CardText = styled.Text`
   font-size: 16px;
-  color: ${({ theme }) => theme.colors.primary._500};
+  color: ${({ theme }) => theme.colors.primary._600};
   font-family: ${({ theme }) => theme.fonts.bold};
   text-align: start;
 `;

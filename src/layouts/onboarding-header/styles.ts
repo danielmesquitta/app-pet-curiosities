@@ -10,12 +10,12 @@ export const Container = styled.View`
 export const Title = styled.Text`
   font-size: 24px;
   margin-bottom: 8px;
-  color: ${({ theme }) => theme.colors.primary._500};
+  color: ${({ theme }) => theme.colors.primary._600};
   font-family: ${({ theme }) => theme.fonts.black};
 `;
 
 export const SubTitle = styled.Text`
   font-size: 18px;
-  color: ${({ theme }) => theme.colors.primary._500};
+  color: ${({ theme }) => theme.colors.primary._600};
   font-family: ${({ theme }) => theme.fonts.regular};
 `;

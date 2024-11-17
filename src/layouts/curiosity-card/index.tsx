@@ -36,7 +36,7 @@ export function CuriosityCard({ title, content, ...rest }: Props) {
             <Icon
               size={30}
               onPress={handleLike}
-              color={isLiked ? colors.status.info._200 : undefined}
+              color={isLiked ? colors.status.success._300 : undefined}
               name={isLiked ? "thumbs-up" : "thumbs-up-outline"}
             />
             <Icon

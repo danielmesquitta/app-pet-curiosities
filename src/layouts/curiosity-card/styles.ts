@@ -4,7 +4,7 @@ import { IconProps } from "./types";
 
 export const Container = styled.View`
   flex: 1;
-  background-color: ${({ theme }) => theme.colors.primary._100};
+  background-color: ${({ theme }) => theme.colors.primary._200};
   padding: 16px;
   margin-bottom: 20px;
   border-radius: 20px;
@@ -13,7 +13,7 @@ export const Container = styled.View`
 export const Title = styled.Text`
   font-size: 20px;
   font-family: ${({ theme }) => theme.fonts.bold};
-  color: ${({ theme }) => theme.colors.primary._500};
+  color: ${({ theme }) => theme.colors.primary._600};
   margin-bottom: 8px;
 `;
 
@@ -21,7 +21,7 @@ export const Content = styled.Text`
   font-size: 16px;
   line-height: 22px;
   font-family: ${({ theme }) => theme.fonts.regular};
-  color: ${({ theme }) => theme.colors.primary._500};
+  color: ${({ theme }) => theme.colors.primary._600};
 `;
 
 export const Footer = styled.View`
@@ -43,11 +43,11 @@ export const FooterLeftIcons = styled.View`
 
 export const FooterLeftText = styled.Text`
   font-family: ${({ theme }) => theme.fonts.regular};
-  color: ${({ theme }) => theme.colors.primary._500};
+  color: ${({ theme }) => theme.colors.primary._600};
   font-size: 14px;
 `;
 
 export const Icon = styled(Ionicons)<IconProps>`
   padding: 4px;
-  color: ${({ theme, color }) => color || theme.colors.primary._500};
+  color: ${({ theme, color }) => color || theme.colors.primary._600};
 `;

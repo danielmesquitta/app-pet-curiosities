@@ -5,7 +5,7 @@ export const Container = styled.View`
   width: 100%;
   height: 8px;
   border-radius: 4px;
-  background-color: ${({ theme }) => theme.colors.primary._200};
+  background-color: ${({ theme }) => theme.colors.primary._300};
 `;
 
 export const Progress = styled.View<ProgressProps>`

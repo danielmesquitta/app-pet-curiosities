@@ -4,7 +4,7 @@ export const Container = styled.View`
   flex: 1;
   padding: 12px;
   padding-top: 0;
-  background-color: ${({ theme }) => theme.colors.primary._100};
+  background-color: ${({ theme }) => theme.colors.primary._200};
 `;
 
 export const Footer = styled.View`

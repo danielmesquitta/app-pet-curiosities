@@ -246,7 +246,7 @@ export function Ranking() {
   const [league, setLeague] = useState<LeagueName>("ruby");
 
   return (
-    <ContainerLayout background={colors.primary._050}>
+    <ContainerLayout background={colors.primary._100}>
       <HomeHeader />
 
       <Container>

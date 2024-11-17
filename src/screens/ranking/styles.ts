@@ -9,7 +9,7 @@ export const Container = styled.View`
 `;
 
 export const Icon = styled(Ionicons)`
-  color: ${({ theme, color }) => color || theme.colors.primary._500};
+  color: ${({ theme, color }) => color || theme.colors.primary._600};
 `;
 
 export const RankingPositionCard = styled.View<RankingPositionCardProps>`
@@ -20,7 +20,7 @@ export const RankingPositionCard = styled.View<RankingPositionCardProps>`
   padding: 10px;
   border-radius: 8px;
   background-color: ${({ theme, isCurrentUser }) =>
-    isCurrentUser ? theme.colors.primary._100 : "transparent"};
+    isCurrentUser ? theme.colors.primary._200 : "transparent"};
 `;
 
 export const RankingPositionCardImage = styled.Image`
@@ -32,7 +32,7 @@ export const RankingPositionCardImage = styled.Image`
 
 export const RankingPositionCardPlace = styled.Text`
   font-size: 20px;
-  color: ${({ theme }) => theme.colors.primary._500};
+  color: ${({ theme }) => theme.colors.primary._600};
   font-family: ${({ theme }) => theme.fonts.black};
 `;
 
@@ -40,14 +40,14 @@ export const RankingPositionCardName = styled.Text`
   width: 50%;
   line-height: 22px;
   font-size: 18px;
-  color: ${({ theme }) => theme.colors.primary._500};
+  color: ${({ theme }) => theme.colors.primary._600};
   font-family: ${({ theme }) => theme.fonts.bold};
 `;
 
 export const RankingPositionCardXP = styled.Text`
   line-height: 22px;
   font-size: 18px;
-  color: ${({ theme }) => theme.colors.primary._500};
+  color: ${({ theme }) => theme.colors.primary._600};
   font-family: ${({ theme }) => theme.fonts.regular};
 `;
 
@@ -57,8 +57,8 @@ export const LeaguesContainer = styled.View`
 
 export const LeagueCard = styled.View`
   flex: 1;
-  background-color: ${({ theme }) => theme.colors.primary._100};
-  border-color: ${({ theme }) => theme.colors.primary._200};
+  background-color: ${({ theme }) => theme.colors.primary._200};
+  border-color: ${({ theme }) => theme.colors.primary._300};
   height: 96px;
   width: 96px;
   display: flex;
@@ -82,12 +82,12 @@ export const LeaguesHeader = styled.View`
 export const LeaguesHeaderTitle = styled.Text`
   font-size: 24px;
   margin-bottom: 4px;
-  color: ${({ theme }) => theme.colors.primary._500};
+  color: ${({ theme }) => theme.colors.primary._600};
   font-family: ${({ theme }) => theme.fonts.black};
 `;
 
 export const LeaguesHeaderText = styled.Text`
   font-size: 18px;
-  color: ${({ theme }) => theme.colors.primary._500};
+  color: ${({ theme }) => theme.colors.primary._600};
   font-family: ${({ theme }) => theme.fonts.regular};
 `;

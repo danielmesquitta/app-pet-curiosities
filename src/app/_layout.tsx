@@ -30,12 +30,12 @@ export default function RootLayout() {
   }, [error]);
 
   useEffect(() => {
-    NavigationBar.setBackgroundColorAsync(theme.colors.primary._100).then(
+    NavigationBar.setBackgroundColorAsync(theme.colors.primary._200).then(
       () => {
         setIsNavigationBarReady(true);
       }
     );
-  });
+  }, []);
 
   useEffect(() => {
     if (isFontsLoaded && isNavigationBarReady) {
@@ -54,7 +54,7 @@ export default function RootLayout() {
 function RootLayoutNav() {
   return (
     <ThemeProvider theme={theme}>
-      <StatusBar style="dark" backgroundColor={theme.colors.primary._100} />
+      <StatusBar style="dark" backgroundColor={theme.colors.primary._200} />
       <HooksProvider>
         <Slot />
       </HooksProvider>

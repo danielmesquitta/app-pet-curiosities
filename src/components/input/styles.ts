@@ -15,18 +15,18 @@ export const Container = styled(TouchableOpacity)<ContainerProps>`
   align-items: center;
   border-width: 2px;
   border-color: ${({ theme, isFocused }) =>
-    isFocused ? theme.colors.primary._300 : theme.colors.primary._100};
+    isFocused ? theme.colors.primary._400 : theme.colors.primary._200};
 `;
 
 export const TextInput = styled(RNTextInput)`
   flex: 1;
   font-size: 16px;
-  color: ${({ theme }) => theme.colors.primary._500};
+  color: ${({ theme }) => theme.colors.primary._600};
   font-family: ${({ theme }) => theme.fonts.regular};
 `;
 
 export const Icon = styled(Ionicons)<IconProps>`
   margin-right: 16px;
   color: ${({ theme, isFocused, isFilled }) =>
-    isFocused || isFilled ? theme.colors.primary._300 : theme.colors.gray._100};
+    isFocused || isFilled ? theme.colors.primary._400 : theme.colors.gray._100};
 `;

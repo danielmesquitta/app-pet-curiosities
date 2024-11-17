@@ -4,7 +4,7 @@ export const Container = styled.View`
   flex: 1;
   padding: 12px;
   padding-top: 0;
-  background-color: ${({ theme }) => theme.colors.primary._100};
+  background-color: ${({ theme }) => theme.colors.primary._200};
 `;
 
 export const Footer = styled.View`
@@ -29,12 +29,12 @@ export const FooterContent = styled.View`
 
 export const FooterTitle = styled.Text`
   font-size: 14px;
-  color: ${({ theme }) => theme.colors.primary._500};
+  color: ${({ theme }) => theme.colors.primary._600};
   font-family: ${({ theme }) => theme.fonts.regular};
 `;
 
 export const FooterText = styled.Text`
   font-size: 18px;
-  color: ${({ theme }) => theme.colors.primary._500};
+  color: ${({ theme }) => theme.colors.primary._600};
   font-family: ${({ theme }) => theme.fonts.bold};
 `;

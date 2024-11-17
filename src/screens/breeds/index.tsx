@@ -183,7 +183,7 @@ export function Breeds() {
           <FooterText>{breed?.text || "Choose a breed to continue"}</FooterText>
         </FooterContent>
 
-        <Link disabled={!breed} href="/onboarding/goals" asChild>
+        <Link disabled={!breed} href="/onboarding/interests" asChild>
           <Button disabled={!breed} style={{ flex: 1 }}>
             Continue
           </Button>

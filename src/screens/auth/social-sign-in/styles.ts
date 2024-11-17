@@ -11,7 +11,7 @@ export const Content = styled.View``;
 
 export const SubTitle = styled.Text`
   font-size: 18px;
-  color: ${({ theme }) => theme.colors.primary._500};
+  color: ${({ theme }) => theme.colors.primary._600};
   font-family: ${({ theme }) => theme.fonts.regular};
   margin-bottom: 8px;
 `;

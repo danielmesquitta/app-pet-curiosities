@@ -5,8 +5,8 @@ import styled from "styled-components/native";
 import { ContainerProps, TextProps } from "./types";
 
 const backgroundOptions = {
-  primary: colors.primary._400,
-  secondary: colors.primary._200,
+  primary: colors.primary._500,
+  secondary: colors.primary._300,
   tertiary: "transparent",
 };
 
@@ -22,7 +22,7 @@ export const Container = styled(TouchableOpacity)<ContainerProps>`
 
 export const Text = styled.Text<TextProps>`
   color: ${({ theme, disabled }) =>
-    disabled ? colors.gray._200 : theme.colors.primary._500};
+    disabled ? colors.gray._200 : theme.colors.primary._600};
   text-decoration: ${({ appearance }) =>
     appearance === "tertiary" ? "underline" : "none"};
   font-family: ${({ theme }) => theme.fonts.bold};
@@ -31,5 +31,5 @@ export const Text = styled.Text<TextProps>`
 
 export const Icon = styled(Ionicons)`
   margin-right: 16px;
-  color: ${({ theme }) => theme.colors.primary._500};
+  color: ${({ theme }) => theme.colors.primary._600};
 `;
