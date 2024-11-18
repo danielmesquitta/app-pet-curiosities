@@ -5,8 +5,7 @@ import { IconProps } from "./types";
 export const Container = styled.View`
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  gap: 32px;
+  justify-content: space-evenly;
   padding-bottom: 12px;
   background-color: ${({ theme }) => theme.colors.primary._200};
 `;

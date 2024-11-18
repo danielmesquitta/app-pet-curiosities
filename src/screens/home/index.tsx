@@ -2,6 +2,7 @@ import { Button } from "@/components/button";
 import { CuriosityCard } from "@/layouts/curiosity-card";
 import { HomeHeader } from "@/layouts/home-header";
 import { Wrapper } from "@/layouts/wrapper";
+import { Link } from "expo-router";
 import { Image } from "react-native";
 import { Container, HomeContainer, HomeSubTitle, HomeTitle } from "./styles";
 
@@ -43,7 +44,9 @@ export function Home() {
             />
           ))}
 
-          <Button appearance="tertiary">View all curiosities</Button>
+          <Link href="/home/curiosities/history" asChild>
+            <Button appearance="tertiary">View all curiosities</Button>
+          </Link>
         </HomeContainer>
       </Container>
     </Wrapper>

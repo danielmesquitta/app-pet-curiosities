@@ -22,8 +22,6 @@ export interface IconProps {
   color?: string;
 }
 
-type Zone = "promotion" | "demotion" | "locked";
-
 export interface RankingPositionProps {
   position: number;
   user: {
@@ -32,9 +30,11 @@ export interface RankingPositionProps {
   };
   xp: number;
   isCurrentUser?: boolean;
-  zone?: Zone;
 }
+
+export type Zone = "promotion" | "demotion" | "locked";
 
 export interface RankingPositionCardProps {
   isCurrentUser?: boolean;
+  zone: Zone;
 }

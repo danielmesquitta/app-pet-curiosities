@@ -1,15 +1,18 @@
+import { Ionicons } from "@expo/vector-icons";
 import styled from "styled-components/native";
+import { FooterTextProps } from "./types";
 
 export const Container = styled.View`
   flex: 1;
   padding: 12px;
   padding-top: 0;
-  background-color: ${({ theme }) => theme.colors.primary._200};
+  background-color: ${({ theme }) => theme.colors.primary._100};
 `;
 
 export const Header = styled.View`
   flex: 1;
   padding: 8px;
+  padding-top: 20px;
   width: 100%;
   align-items: flex-start;
   justify-content: flex-start;
@@ -44,8 +47,11 @@ export const Form = styled.View`
 `;
 
 export const FooterContent = styled.View`
+  flex-direction: row;
+  align-items: center;
   justify-content: center;
   width: 50%;
+  gap: 8px;
 `;
 
 export const FooterTitle = styled.Text`
@@ -54,8 +60,10 @@ export const FooterTitle = styled.Text`
   font-family: ${({ theme }) => theme.fonts.regular};
 `;
 
-export const FooterText = styled.Text`
+export const FooterText = styled.Text<FooterTextProps>`
   font-size: 18px;
-  color: ${({ theme }) => theme.colors.primary._600};
+  color: ${({ theme, color }) => color || theme.colors.primary._600};
   font-family: ${({ theme }) => theme.fonts.bold};
 `;
+
+export const Icon = styled(Ionicons)``;

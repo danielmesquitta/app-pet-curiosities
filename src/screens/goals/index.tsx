@@ -57,7 +57,7 @@ export function Goals() {
           <FooterText>{!goal && "Choose an option to continue"}</FooterText>
         </FooterContent>
 
-        <Link disabled={!goal} href="/home" asChild>
+        <Link disabled={!goal} href="/onboarding/paywall" asChild>
           <Button disabled={!goal} style={{ flex: 1 }}>
             Continue
           </Button>

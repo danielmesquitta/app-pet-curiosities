@@ -19,7 +19,13 @@ import {
   RankingPositionCardPlace,
   RankingPositionCardXP,
 } from "./styles";
-import { LeagueName, LeagueProps, Props, RankingPositionProps } from "./types";
+import {
+  LeagueName,
+  LeagueProps,
+  Props,
+  RankingPositionProps,
+  Zone,
+} from "./types";
 
 const screenWidth = Dimensions.get("window").width;
 const innerWidth = screenWidth - 40;
@@ -67,25 +73,21 @@ const positions: RankingPositionProps[] = [
     position: 1,
     user: { avatar: "https://i.pravatar.cc/280", name: "John Doe" },
     xp: 1000,
-    zone: "promotion",
   },
   {
     position: 2,
     user: { avatar: "https://i.pravatar.cc/281", name: "John Doe" },
     xp: 950,
-    zone: "promotion",
   },
   {
     position: 3,
     user: { avatar: "https://i.pravatar.cc/282", name: "John Doe" },
     xp: 900,
-    zone: "promotion",
   },
   {
     position: 4,
     user: { avatar: "https://i.pravatar.cc/283", name: "John Doe" },
     xp: 850,
-    zone: "promotion",
   },
   {
     position: 5,
@@ -147,27 +149,27 @@ const positions: RankingPositionProps[] = [
     position: 16,
     user: { avatar: "https://i.pravatar.cc/295", name: "John Doe" },
     xp: 400,
-    zone: "demotion",
   },
   {
     position: 17,
     user: { avatar: "https://i.pravatar.cc/296", name: "John Doe" },
     xp: 300,
-    zone: "demotion",
   },
   {
     position: 18,
     user: { avatar: "https://i.pravatar.cc/297", name: "John Doe" },
     xp: 200,
-    zone: "demotion",
   },
   {
     position: 19,
     user: { avatar: "https://i.pravatar.cc/298", name: "John Doe" },
     xp: 100,
-    zone: "demotion",
   },
 ];
+
+const multiplier = 0.33;
+const promotionZoneEnd = multiplier * positions.length;
+const demotionZoneStart = (1 - multiplier) * positions.length;
 
 function League({ item }: { item: LeagueProps }) {
   return (
@@ -175,7 +177,7 @@ function League({ item }: { item: LeagueProps }) {
       {item.image ? (
         <LeagueCardImage source={item.image} />
       ) : (
-        <Icon size={64} name="lock-closed" color={colors.gray._200} />
+        <Icon size={56} name="lock-closed" color={colors.gray._200} />
       )}
     </LeagueCard>
   );
@@ -221,8 +223,16 @@ function Leagues({ league }: Props) {
 }
 
 function RankingPosition({ item }: { item: RankingPositionProps }) {
+  let zone: Zone = "locked";
+  if (item.position <= promotionZoneEnd) {
+    zone = "promotion";
+  }
+  if (item.position >= demotionZoneStart) {
+    zone = "demotion";
+  }
+
   return (
-    <RankingPositionCard isCurrentUser={item.isCurrentUser}>
+    <RankingPositionCard isCurrentUser={item.isCurrentUser} zone={zone}>
       <RankingPositionCardPlace>{item.position}</RankingPositionCardPlace>
       <RankingPositionCardImage source={{ uri: item.user.avatar }} />
       <RankingPositionCardName>{item.user.name}</RankingPositionCardName>

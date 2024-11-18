@@ -18,8 +18,9 @@ export default {
 
   status: {
     error: {
-      _100: "#eccaca",
-      _200: "#C96868",
+      _100: "#f4dfdf",
+      _200: "#eccaca",
+      _300: "#C96868",
     },
     success: {
       _100: "#E9EED9",

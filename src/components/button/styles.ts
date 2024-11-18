@@ -10,8 +10,20 @@ const backgroundOptions = {
   tertiary: "transparent",
 };
 
+const heightOptions = {
+  small: 50,
+  medium: 60,
+};
+
+const fontSizeOptions = {
+  small: 16,
+  medium: 18,
+};
+
 export const Container = styled(TouchableOpacity)<ContainerProps>`
-  height: 60px;
+  height: ${({ size }) => heightOptions[size || "medium"]}px;
+  padding-left: 20px;
+  padding-right: 20px;
   background: ${({ appearance, disabled }) =>
     disabled ? colors.gray._100 : backgroundOptions[appearance || "primary"]};
   border-radius: 4px;
@@ -26,7 +38,7 @@ export const Text = styled.Text<TextProps>`
   text-decoration: ${({ appearance }) =>
     appearance === "tertiary" ? "underline" : "none"};
   font-family: ${({ theme }) => theme.fonts.bold};
-  font-size: 18px;
+  font-size: ${({ size }) => fontSizeOptions[size || "medium"]}px;
 `;
 
 export const Icon = styled(Ionicons)`

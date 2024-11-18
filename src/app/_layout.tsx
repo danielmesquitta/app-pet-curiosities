@@ -54,9 +54,13 @@ export default function RootLayout() {
 function RootLayoutNav() {
   return (
     <ThemeProvider theme={theme}>
-      <StatusBar style="dark" backgroundColor={theme.colors.primary._200} />
+      <StatusBar
+        translucent
+        style="dark"
+        backgroundColor={theme.colors.primary._200}
+      />
       <HooksProvider>
-        <Slot />
+        <Slot initialRouteName="index" />
       </HooksProvider>
     </ThemeProvider>
   );

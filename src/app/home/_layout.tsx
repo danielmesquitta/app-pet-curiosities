@@ -18,6 +18,7 @@ export default function TabLayout() {
       <StatusBar style="dark" backgroundColor={colors.primary._200} />
 
       <Tabs
+        initialRouteName="curiosities"
         screenOptions={{
           animation: "fade",
           headerShown: false,
@@ -40,7 +41,7 @@ export default function TabLayout() {
         }}
       >
         <Tabs.Screen
-          name="index"
+          name="curiosities"
           options={{
             tabBarIcon: ({ color }) => <Icon name="paw" color={color} />,
           }}

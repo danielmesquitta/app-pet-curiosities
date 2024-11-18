@@ -4,7 +4,7 @@ import { colors } from "@/theme";
 import { Stack } from "expo-router";
 
 export default function RootOnboardingLayout() {
-  const { progress, setProgress } = useOnboarding();
+  const { progress } = useOnboarding();
 
   return (
     <Stack

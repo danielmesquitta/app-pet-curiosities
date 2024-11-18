@@ -15,14 +15,12 @@ export function SocialSignIn() {
           <Form>
             <SubTitle>Join a community of pet lovers!</SubTitle>
 
-            <Link href="/onboarding/paywall" asChild>
-              <Button onPress={() => {}}>Get started</Button>
+            <Link href="/onboarding" asChild>
+              <Button>Get started</Button>
             </Link>
 
             <Link href="/home" asChild>
-              <Button appearance="secondary" onPress={() => {}}>
-                I already have an account
-              </Button>
+              <Button appearance="secondary">I already have an account</Button>
             </Link>
           </Form>
         </Content>

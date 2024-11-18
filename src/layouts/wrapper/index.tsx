@@ -3,9 +3,14 @@ import React from "react";
 import { ScrollView } from "react-native";
 import { Props } from "./types";
 
-export const Wrapper = ({ children, scrollViewProps, ...rest }: Props) => {
+export const Wrapper = ({
+  children,
+  scrollViewProps,
+  enabled = true,
+  ...rest
+}: Props) => {
   return (
-    <Container enabled {...rest}>
+    <Container enabled={enabled} {...rest}>
       <ScrollView
         contentContainerStyle={{
           flexGrow: 1,
