@@ -1,9 +1,9 @@
+import { Icon as IconComponent } from "@/components/icon";
 import { TextInput as RNTextInput, TouchableOpacity } from "react-native";
 
-import { Ionicons } from "@expo/vector-icons";
 import styled from "styled-components/native";
 
-import { ContainerProps, IconProps } from "./types";
+import { ContainerProps, StyledIconProps } from "./types";
 
 export const Container = styled(TouchableOpacity)<ContainerProps>`
   width: 100%;
@@ -25,7 +25,7 @@ export const TextInput = styled(RNTextInput)`
   font-family: ${({ theme }) => theme.fonts.regular};
 `;
 
-export const Icon = styled(Ionicons)<IconProps>`
+export const Icon = styled(IconComponent)<StyledIconProps>`
   margin-right: 16px;
   color: ${({ theme, isFocused, isFilled }) =>
     isFocused || isFilled ? theme.colors.primary._400 : theme.colors.gray._100};

@@ -15,7 +15,6 @@ import { ForwardRef, InputProps, Props } from "./types";
 export const Input = forwardRef<ForwardRef, Props>(function Input(
   {
     icon,
-    iconSize = 20,
     name,
     style,
     value: initialValue = "",
@@ -61,14 +60,7 @@ export const Input = forwardRef<ForwardRef, Props>(function Input(
       activeOpacity={1}
       isFocused={isFocused}
     >
-      {icon && (
-        <Icon
-          size={iconSize}
-          name={icon}
-          isFocused={isFocused}
-          isFilled={!!value}
-        />
-      )}
+      {icon && <Icon {...icon} isFocused={isFocused} isFilled={!!value} />}
       <TextInput
         ref={inputRef}
         placeholderTextColor={colors.gray._100}

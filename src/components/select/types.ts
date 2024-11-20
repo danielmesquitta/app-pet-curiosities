@@ -2,8 +2,11 @@ import { TouchableOpacityProps } from "react-native";
 
 export type Appearance = "primary" | "success" | "error";
 
+export type ParentAppearance = "primary" | "secondary";
+
 export interface CardProps extends TouchableOpacityProps {
   appearance?: Appearance;
+  parentAppearance?: ParentAppearance;
   type?: "image" | "text";
 }
 

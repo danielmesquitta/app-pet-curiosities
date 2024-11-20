@@ -1,10 +1,9 @@
-import { Ionicons } from "@expo/vector-icons";
 import { TextInput, TextInputProps } from "react-native";
+import { IconProps } from "../icon/types";
 
 export interface Props extends TextInputProps {
   name: string;
-  icon?: React.ComponentProps<typeof Ionicons>["name"];
-  iconSize?: number;
+  icon?: IconProps;
   value?: string;
 }
 
@@ -14,7 +13,7 @@ export interface ContainerProps {
   isFocused: boolean;
 }
 
-export interface IconProps {
+export interface StyledIconProps {
   isFocused: boolean;
   isFilled: boolean;
 }

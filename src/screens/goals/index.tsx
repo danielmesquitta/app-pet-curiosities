@@ -2,7 +2,7 @@ import { Button } from "@/components/button";
 import { Select } from "@/components/select";
 import { Item } from "@/components/select/types";
 import { useOnboarding } from "@/hooks/onboarding";
-import { OnboardingHeader } from "@/layouts/onboarding-header";
+import { Header } from "@/layouts/header";
 import { Link, useLocalSearchParams } from "expo-router";
 import { useEffect, useState } from "react";
 import { FooterContent, FooterText } from "../breeds/styles";
@@ -40,7 +40,7 @@ export function Goals() {
 
   return (
     <Container>
-      <OnboardingHeader
+      <Header
         title="Set your goal"
         subtitle="How much time will you spend learning more about your pet?"
       />

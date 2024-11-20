@@ -1,7 +1,7 @@
 import { Container as ContainerLayout } from "@/layouts/container";
 import { CuriosityCard as CuriosityCardLayout } from "@/layouts/curiosity-card";
+import { Header } from "@/layouts/header";
 import { HomeHeader } from "@/layouts/home-header";
-import { OnboardingHeader } from "@/layouts/onboarding-header";
 import { FlatList } from "react-native";
 import { Container } from "./styles";
 
@@ -66,7 +66,7 @@ export function History() {
       <HomeHeader />
 
       <Container>
-        <OnboardingHeader
+        <Header
           title="History"
           subtitle="Here, you'll find every tip, trick, fun fact, and curiosity you've ever come across about your pet."
         />

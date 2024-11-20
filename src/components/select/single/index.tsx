@@ -10,7 +10,12 @@ import {
 import { Item } from "../types";
 import { Props, SelectItemProps } from "./types";
 
-function SelectItem({ item, onSelect, quiz }: SelectItemProps) {
+function SelectItem({
+  item,
+  onSelect,
+  quiz,
+  appearance: parentAppearance,
+}: SelectItemProps) {
   function handleSelect() {
     onSelect(item);
   }
@@ -42,6 +47,7 @@ function SelectItem({ item, onSelect, quiz }: SelectItemProps) {
       appearance={appearance}
       activeOpacity={0.7}
       onPress={handleSelect}
+      parentAppearance={parentAppearance}
     >
       {item.image && <CardImage source={item.image} />}
       {texts.length > 0 && (
@@ -60,6 +66,7 @@ export function Select({
   onSelect,
   search,
   quiz,
+  appearance,
   ...props
 }: Props) {
   const [items, setItems] = useState(defaultItems);
@@ -108,9 +115,15 @@ export function Select({
         {...props}
         data={items}
         renderItem={({ item }) => (
-          <SelectItem item={item} onSelect={handleSelect} quiz={quiz} />
+          <SelectItem
+            item={item}
+            onSelect={handleSelect}
+            quiz={quiz}
+            appearance={appearance}
+          />
         )}
         keyExtractor={(item) => item.id}
+        style={{ marginLeft: -8, marginRight: -8 }}
       />
     </Container>
   );

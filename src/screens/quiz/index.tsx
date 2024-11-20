@@ -1,19 +1,11 @@
 import { Button } from "@/components/button";
 import { Select } from "@/components/select";
 import { Item } from "@/components/select/types";
+import { Header } from "@/layouts/header";
 import { colors } from "@/theme";
 import { useState } from "react";
 import { negativeFeedbacks, positiveFeedbacks } from "./data";
-import {
-  Container,
-  Footer,
-  FooterContent,
-  FooterText,
-  Header,
-  HeaderSubTitle,
-  HeaderTitle,
-  Icon,
-} from "./styles";
+import { Container, Footer, FooterContent, FooterText, Icon } from "./styles";
 
 const imageData: Item[] = [
   {
@@ -73,15 +65,14 @@ export function Quiz() {
 
   return (
     <Container>
-      <Header>
-        <HeaderTitle>Quiz</HeaderTitle>
-        <HeaderSubTitle>
-          Which image corresponds to the Shih Tzu breed?
-        </HeaderSubTitle>
-      </Header>
+      <Header
+        title="Quiz"
+        subtitle="Which image corresponds to the Shih Tzu breed?"
+      />
 
       {random > 0.5 ? (
         <Select
+          appearance="secondary"
           scrollEnabled={false}
           numColumns={2}
           items={imageData}
@@ -90,6 +81,7 @@ export function Quiz() {
         />
       ) : (
         <Select
+          appearance="secondary"
           scrollEnabled={false}
           items={textData}
           onSelect={setAnswer}
@@ -103,7 +95,8 @@ export function Quiz() {
           {isAnswered && isCorrect && (
             <>
               <Icon
-                name="checkmark-circle"
+                name="check"
+                version="FontAwesome"
                 size={25}
                 color={colors.status.success._300}
               />
@@ -119,7 +112,8 @@ export function Quiz() {
           {isAnswered && !isCorrect && (
             <>
               <Icon
-                name="close-circle"
+                name="close"
+                version="FontAwesome"
                 size={25}
                 color={colors.status.error._300}
               />

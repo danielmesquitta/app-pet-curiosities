@@ -19,7 +19,7 @@ export function SocialSignIn() {
               <Button>Get started</Button>
             </Link>
 
-            <Link href="/home" asChild>
+            <Link href="/home/curiosities" asChild>
               <Button appearance="secondary">I already have an account</Button>
             </Link>
           </Form>

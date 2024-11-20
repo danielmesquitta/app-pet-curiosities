@@ -1,4 +1,5 @@
 import { Container as ContainerLayout } from "@/layouts/container";
+import { Header } from "@/layouts/header";
 import { HomeHeader } from "@/layouts/home-header";
 import { colors } from "@/theme";
 import { capitalize } from "@/utils/capitalize";
@@ -10,9 +11,6 @@ import {
   LeagueCard,
   LeagueCardImage,
   LeaguesContainer,
-  LeaguesHeader,
-  LeaguesHeaderText,
-  LeaguesHeaderTitle,
   RankingPositionCard,
   RankingPositionCardImage,
   RankingPositionCardName,
@@ -177,7 +175,7 @@ function League({ item }: { item: LeagueProps }) {
       {item.image ? (
         <LeagueCardImage source={item.image} />
       ) : (
-        <Icon size={56} name="lock-closed" color={colors.gray._200} />
+        <Icon size={56} name="lock" color={colors.gray._200} />
       )}
     </LeagueCard>
   );
@@ -261,12 +259,10 @@ export function Ranking() {
 
       <Container>
         <LeaguesContainer>
-          <LeaguesHeader>
-            <LeaguesHeaderTitle>{capitalize(league)} League</LeaguesHeaderTitle>
-            <LeaguesHeaderText>
-              You're 15XP from the promotion zone!
-            </LeaguesHeaderText>
-          </LeaguesHeader>
+          <Header
+            title={`${capitalize(league)} League`}
+            subtitle="You're 15XP from the promotion zone!"
+          />
 
           <Leagues league={league} />
         </LeaguesContainer>

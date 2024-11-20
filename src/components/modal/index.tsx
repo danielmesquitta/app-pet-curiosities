@@ -44,7 +44,7 @@ export function Modal({
         <Title>{title}</Title>
 
         <CloseButton onPress={handleClose}>
-          <Icon name="close" size={25} />
+          <Icon version="FontAwesome" name="close" size={25} />
         </CloseButton>
       </Header>
 

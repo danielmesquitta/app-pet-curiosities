@@ -1,4 +1,4 @@
-import { Ionicons } from "@expo/vector-icons";
+import { Icon as IconComponent } from "@/components/icon";
 import styled from "styled-components/native";
 import { FooterTextProps } from "./types";
 
@@ -7,28 +7,6 @@ export const Container = styled.View`
   padding: 12px;
   padding-top: 0;
   background-color: ${({ theme }) => theme.colors.primary._100};
-`;
-
-export const Header = styled.View`
-  flex: 1;
-  padding: 8px;
-  padding-top: 20px;
-  width: 100%;
-  align-items: flex-start;
-  justify-content: flex-start;
-`;
-
-export const HeaderTitle = styled.Text`
-  font-size: 24px;
-  margin-bottom: 4px;
-  color: ${({ theme }) => theme.colors.primary._600};
-  font-family: ${({ theme }) => theme.fonts.black};
-`;
-
-export const HeaderSubTitle = styled.Text`
-  font-size: 18px;
-  color: ${({ theme }) => theme.colors.primary._600};
-  font-family: ${({ theme }) => theme.fonts.regular};
 `;
 
 export const Footer = styled.View`
@@ -66,4 +44,4 @@ export const FooterText = styled.Text<FooterTextProps>`
   font-family: ${({ theme }) => theme.fonts.bold};
 `;
 
-export const Icon = styled(Ionicons)``;
+export const Icon = styled(IconComponent)``;

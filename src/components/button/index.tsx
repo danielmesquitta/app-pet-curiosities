@@ -5,7 +5,6 @@ import { Props } from "./types";
 
 export function Button({
   icon,
-  iconSize = 20,
   size = "medium",
   children,
   appearance,
@@ -20,7 +19,7 @@ export function Button({
       size={size}
       {...rest}
     >
-      {icon && <Icon size={iconSize} name={icon} />}
+      {icon && <Icon {...icon} />}
       <Text appearance={appearance} disabled={disabled} size={size}>
         {children}
       </Text>

@@ -14,6 +14,18 @@ const borderOptions = {
   error: colors.status.error._200,
 };
 
+function getByAppearance(
+  obj: Record<string, any>,
+  appearance: string,
+  parentAppearance: string
+) {
+  if (appearance === "primary" && parentAppearance === "secondary") {
+    return colors.primary._200;
+  }
+
+  return obj[appearance];
+}
+
 export const Container = styled.View`
   flex: 1;
 `;
@@ -28,9 +40,12 @@ export const Card = styled.TouchableOpacity<CardProps>`
   padding-bottom: 20px;
   margin: 8px;
   border-width: 2px;
-  border-color: ${({ appearance }) => borderOptions[appearance || "primary"]};
-  background-color: ${({ appearance }) =>
-    backgroundOptions[appearance || "primary"]};
+  border-color: ${({ appearance = "primary", parentAppearance = "primary" }) =>
+    getByAppearance(borderOptions, appearance, parentAppearance)};
+  background-color: ${({
+    appearance = "primary",
+    parentAppearance = "primary",
+  }) => getByAppearance(backgroundOptions, appearance, parentAppearance)};
   ${({ type }) =>
     type === "image" &&
     css`

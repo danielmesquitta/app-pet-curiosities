@@ -1,16 +1,14 @@
+import { Icon } from "@/components/icon";
 import { colors } from "@/theme";
-import { Ionicons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { TouchableOpacity } from "react-native";
 
-function Icon(props: {
-  name: React.ComponentProps<typeof Ionicons>["name"];
-  color: string;
-}) {
-  return <Ionicons size={28} style={{ marginBottom: -3 }} {...props} />;
-}
+const iconProps = {
+  size: 28,
+  style: { marginBottom: -3 },
+};
 
 export default function TabLayout() {
   return (
@@ -43,19 +41,41 @@ export default function TabLayout() {
         <Tabs.Screen
           name="curiosities"
           options={{
-            tabBarIcon: ({ color }) => <Icon name="paw" color={color} />,
+            tabBarIcon: ({ color }) => (
+              <Icon name="paw" color={color} {...iconProps} />
+            ),
           }}
         />
         <Tabs.Screen
           name="quiz"
           options={{
-            tabBarIcon: ({ color }) => <Icon name="book" color={color} />,
+            tabBarIcon: ({ color }) => (
+              <Icon name="book" color={color} {...iconProps} />
+            ),
           }}
         />
         <Tabs.Screen
           name="ranking"
           options={{
-            tabBarIcon: ({ color }) => <Icon name="podium" color={color} />,
+            tabBarIcon: ({ color }) => (
+              <Icon name="ranking-star" color={color} {...iconProps} />
+            ),
+          }}
+        />
+        <Tabs.Screen
+          name="profile"
+          options={{
+            tabBarIcon: ({ color }) => (
+              <Icon name="user-large" color={color} {...iconProps} />
+            ),
+          }}
+        />
+        <Tabs.Screen
+          name="shop"
+          options={{
+            tabBarIcon: ({ color }) => (
+              <Icon name="cart-shopping" color={color} {...iconProps} />
+            ),
           }}
         />
       </Tabs>

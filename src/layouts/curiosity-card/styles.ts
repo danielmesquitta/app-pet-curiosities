@@ -1,4 +1,4 @@
-import { Ionicons } from "@expo/vector-icons";
+import { Icon as IconComponent } from "@/components/icon";
 import styled from "styled-components/native";
 import { IconProps } from "./types";
 
@@ -47,7 +47,8 @@ export const FooterLeftText = styled.Text`
   font-size: 14px;
 `;
 
-export const Icon = styled(Ionicons)<IconProps>`
+export const Icon = styled(IconComponent)<IconProps>`
   padding: 4px;
+  width: 38px;
   color: ${({ theme, color }) => color || theme.colors.primary._600};
 `;

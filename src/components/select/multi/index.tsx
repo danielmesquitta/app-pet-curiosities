@@ -10,7 +10,7 @@ import {
 import { Item } from "../types";
 import { Props, SelectItemProps } from "./types";
 
-function SelectItem({ item, onSelect }: SelectItemProps) {
+function SelectItem({ item, onSelect, appearance }: SelectItemProps) {
   function handleSelect() {
     onSelect(item);
   }
@@ -23,6 +23,7 @@ function SelectItem({ item, onSelect }: SelectItemProps) {
       appearance={item.isSelected ? "success" : "primary"}
       activeOpacity={0.7}
       onPress={handleSelect}
+      parentAppearance={appearance}
     >
       {item.image && <CardImage source={item.image} />}
       {texts.length > 0 && (
@@ -40,6 +41,7 @@ export function MultiSelect({
   items: defaultItems,
   onSelect,
   search,
+  appearance,
   ...props
 }: Props) {
   const [items, setItems] = useState(defaultItems);
@@ -85,9 +87,14 @@ export function MultiSelect({
         {...props}
         data={items}
         renderItem={({ item }) => (
-          <SelectItem item={item} onSelect={handleSelect} />
+          <SelectItem
+            item={item}
+            onSelect={handleSelect}
+            appearance={appearance}
+          />
         )}
         keyExtractor={(item) => item.id}
+        style={{ marginLeft: -8, marginRight: -8 }}
       />
     </Container>
   );

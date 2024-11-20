@@ -3,7 +3,7 @@ import { Input } from "@/components/input";
 import { Select } from "@/components/select";
 import { Item } from "@/components/select/types";
 import { useOnboarding } from "@/hooks/onboarding";
-import { OnboardingHeader } from "@/layouts/onboarding-header";
+import { Header } from "@/layouts/header";
 import { Link, useLocalSearchParams } from "expo-router";
 import { useEffect, useState } from "react";
 import {
@@ -160,14 +160,14 @@ export function Breeds() {
 
   return (
     <Container>
-      <OnboardingHeader
+      <Header
         title="Which breed is your pet?"
         subtitle="Pick the breed you want to know more about!"
       />
 
       <Form>
         <Input
-          icon="search"
+          icon={{ name: "magnifying-glass", size: 20 }}
           name="search"
           placeholder="Search for a pet breed"
           value={search}

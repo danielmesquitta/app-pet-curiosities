@@ -1,4 +1,4 @@
-import { Ionicons } from "@expo/vector-icons";
+import { Icon as IconComponent } from "@/components/icon";
 import styled from "styled-components/native";
 
 export const Container = styled.View`
@@ -79,7 +79,7 @@ export const FooterBoldText = styled.Text`
   text-align: center;
 `;
 
-export const Icon = styled(Ionicons)`
+export const Icon = styled(IconComponent)`
   margin-top: 2px;
   color: ${({ theme }) => theme.colors.status.success._300};
 `;

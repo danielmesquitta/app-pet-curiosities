@@ -1,5 +1,5 @@
+import { Icon as IconComponent } from "@/components/icon";
 import { colors } from "@/theme";
-import { Ionicons } from "@expo/vector-icons";
 import styled from "styled-components/native";
 import { RankingPositionCardProps } from "./types";
 
@@ -9,7 +9,7 @@ export const Container = styled.View`
   flex: 1;
 `;
 
-export const Icon = styled(Ionicons)``;
+export const Icon = styled(IconComponent)``;
 
 const cardBackgroundOptions = {
   promotion: colors.status.success._100,
@@ -89,21 +89,4 @@ export const LeagueCardImage = styled.Image`
   max-width: 56px;
   max-height: 56px;
   object-fit: contain;
-`;
-
-export const LeaguesHeader = styled.View`
-  margin-bottom: 32px;
-`;
-
-export const LeaguesHeaderTitle = styled.Text`
-  font-size: 24px;
-  margin-bottom: 4px;
-  color: ${({ theme }) => theme.colors.primary._600};
-  font-family: ${({ theme }) => theme.fonts.black};
-`;
-
-export const LeaguesHeaderText = styled.Text`
-  font-size: 18px;
-  color: ${({ theme }) => theme.colors.primary._600};
-  font-family: ${({ theme }) => theme.fonts.regular};
 `;

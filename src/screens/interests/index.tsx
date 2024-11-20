@@ -2,7 +2,7 @@ import { Button } from "@/components/button";
 import { MultiSelect } from "@/components/select";
 import { Item } from "@/components/select/types";
 import { useOnboarding } from "@/hooks/onboarding";
-import { OnboardingHeader } from "@/layouts/onboarding-header";
+import { Header } from "@/layouts/header";
 import { Link, useLocalSearchParams } from "expo-router";
 import { useEffect, useState } from "react";
 import { FooterContent, FooterText } from "../breeds/styles";
@@ -59,7 +59,7 @@ export function Interests() {
 
   return (
     <Container>
-      <OnboardingHeader
+      <Header
         title="What are your interests?"
         subtitle="Which topics would you like to learn more about your pet? We will show you content based on your preferences."
       />

@@ -57,19 +57,19 @@ export function PayWall() {
 
           <ContentContainer>
             <TextContainer>
-              <Icon size={25} name="checkmark-circle-outline" />
+              <Icon size={25} name="check-circle" />
               <Text>Many different curiosities about your pet every day</Text>
             </TextContainer>
             <TextContainer>
-              <Icon size={25} name="checkmark-circle-outline" />
+              <Icon size={25} name="check-circle" />
               <Text>Quizzes personalized for you</Text>
             </TextContainer>
             <TextContainer>
-              <Icon size={25} name="checkmark-circle-outline" />
+              <Icon size={25} name="check-circle" />
               <Text>Ranking to compete with your friends</Text>
             </TextContainer>
             <TextContainer>
-              <Icon size={25} name="checkmark-circle-outline" />
+              <Icon size={25} name="check-circle" />
               <Text>Achievements and trophies for your progress</Text>
             </TextContainer>
           </ContentContainer>
@@ -83,7 +83,7 @@ export function PayWall() {
               <FooterBoldText>$19.99 per year</FooterBoldText> ($1.66 per month)
             </FooterText>
 
-            <Link asChild href="/home">
+            <Link asChild href="/home/curiosities">
               <Button style={{ marginTop: 20 }}>
                 Start my 7-day free trial
               </Button>

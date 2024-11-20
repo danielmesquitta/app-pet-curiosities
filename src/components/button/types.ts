@@ -1,6 +1,5 @@
-import { Ionicons } from "@expo/vector-icons";
-import { ComponentProps } from "react";
 import { TouchableOpacityProps } from "react-native";
+import { IconProps } from "../icon/types";
 
 type Appearance = "primary" | "secondary" | "tertiary";
 
@@ -10,8 +9,7 @@ export interface Props extends TouchableOpacityProps {
   children: string;
   appearance?: Appearance;
   size?: Size;
-  icon?: ComponentProps<typeof Ionicons>["name"];
-  iconSize?: number;
+  icon?: IconProps;
 }
 
 export interface ContainerProps {

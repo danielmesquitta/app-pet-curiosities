@@ -2,7 +2,7 @@ import { Button } from "@/components/button";
 import { Select } from "@/components/select";
 import { Item } from "@/components/select/types";
 import { useOnboarding } from "@/hooks/onboarding";
-import { OnboardingHeader } from "@/layouts/onboarding-header";
+import { Header } from "@/layouts/header";
 import { Link, useLocalSearchParams } from "expo-router";
 import { useEffect, useState } from "react";
 import { FooterContent, FooterText, FooterTitle } from "../breeds/styles";
@@ -33,7 +33,7 @@ export function Species() {
 
   return (
     <Container>
-      <OnboardingHeader
+      <Header
         title="Pick your pet"
         subtitle="Select the pet you want to know more about!"
       />

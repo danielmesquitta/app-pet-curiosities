@@ -1,11 +1,12 @@
 import { Dispatch } from "react";
 import { FlatListProps } from "react-native";
-import { Item } from "../types";
+import { Item, ParentAppearance } from "../types";
 
 export interface SelectItemProps {
   item: Item;
   onSelect: (item: Item) => void;
   quiz?: Quiz | null;
+  appearance?: ParentAppearance;
 }
 
 interface Quiz {
@@ -18,4 +19,5 @@ export interface Props extends Partial<FlatListProps<Item>> {
   items: Item[];
   onSelect: Dispatch<React.SetStateAction<Item | null>>;
   quiz?: Quiz;
+  appearance?: ParentAppearance;
 }

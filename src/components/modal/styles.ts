@@ -1,5 +1,5 @@
+import { Icon as IconComponent } from "@/components/icon";
 import { colors } from "@/theme";
-import { Ionicons } from "@expo/vector-icons";
 import styled, { css } from "styled-components/native";
 import { ContentProps } from "./types";
 
@@ -11,7 +11,7 @@ export const Header = styled.View`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  border-bottom-width: 3px;
+  border-bottom-width: 2px;
   border-color: ${({ theme }) => theme.colors.primary._200};
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
@@ -24,7 +24,9 @@ export const Title = styled.Text`
   color: ${({ theme }) => theme.colors.primary._600};
 `;
 
-export const Icon = styled(Ionicons).attrs({ color: colors.primary._600 })``;
+export const Icon = styled(IconComponent).attrs({
+  color: colors.primary._600,
+})``;
 
 export const CloseButton = styled.TouchableOpacity.attrs({
   activeOpacity: 0.7,

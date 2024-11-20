@@ -40,14 +40,16 @@ export function CuriosityCardDefault({ title, content, ...rest }: Props) {
               <Icon
                 size={30}
                 onPress={handleLike}
+                version="FontAwesome"
                 color={isLiked ? colors.status.success._300 : undefined}
-                name={isLiked ? "thumbs-up" : "thumbs-up-outline"}
+                name={isLiked ? "thumbs-up" : "thumbs-o-up"}
               />
               <Icon
                 size={30}
                 onPress={handleDisLike}
+                version="FontAwesome"
                 color={isDisLiked ? colors.status.error._300 : undefined}
-                name={isDisLiked ? "thumbs-down" : "thumbs-down-outline"}
+                name={isDisLiked ? "thumbs-down" : "thumbs-o-down"}
                 style={{ marginRight: "auto" }}
               />
             </FooterLeftIcons>
@@ -55,12 +57,8 @@ export function CuriosityCardDefault({ title, content, ...rest }: Props) {
             <FooterLeftText>10 likes | 5 dislikes</FooterLeftText>
           </FooterLeft>
 
-          <Icon
-            size={30}
-            name="flag-outline"
-            onPress={() => setIsModalVisible(true)}
-          />
-          <Icon size={30} name="refresh" />
+          <Icon size={30} name="flag" onPress={() => setIsModalVisible(true)} />
+          <Icon size={30} version="FontAwesome" name="refresh" />
         </Footer>
       </Container>
 

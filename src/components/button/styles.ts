@@ -1,6 +1,7 @@
+import { Icon as IconComponent } from "@/components/icon";
 import { colors } from "@/theme";
-import { Ionicons } from "@expo/vector-icons";
 import { TouchableOpacity } from "react-native";
+import { css } from "styled-components";
 import styled from "styled-components/native";
 import { ContainerProps, TextProps } from "./types";
 
@@ -22,14 +23,17 @@ const fontSizeOptions = {
 
 export const Container = styled(TouchableOpacity)<ContainerProps>`
   height: ${({ size }) => heightOptions[size || "medium"]}px;
-  padding-left: 20px;
-  padding-right: 20px;
   background: ${({ appearance, disabled }) =>
     disabled ? colors.gray._100 : backgroundOptions[appearance || "primary"]};
   border-radius: 4px;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  ${({ appearance }) =>
+    appearance !== "tertiary" &&
+    css`
+      padding: 0 20px;
+    `}
 `;
 
 export const Text = styled.Text<TextProps>`
@@ -41,7 +45,7 @@ export const Text = styled.Text<TextProps>`
   font-size: ${({ size }) => fontSizeOptions[size || "medium"]}px;
 `;
 
-export const Icon = styled(Ionicons)`
+export const Icon = styled(IconComponent)`
   margin-right: 16px;
   color: ${({ theme }) => theme.colors.primary._600};
 `;
